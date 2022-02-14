@@ -4,20 +4,27 @@ const routes = [
     {
         path: "/",
         name: "index",
-        component: () => import('@/views/Index.vue'),
-    },
-    {
-        path: "/:id",
-        name: "blog",
-        component: () => import( '@/views/blog.vue'),
+        component: () => import('@/views/index.vue'),
         children : [
             {
-                path : 'post',
-                redirect : { name : 'blog'},
+                path : '/',
+                name : 'home',
+                component : () => import( '@/views/home.vue'),
             },
             {
-                path : 'post/:post',
-                component : () => import('@/views/post.vue'),
+                path: "/@:id",
+                name: "blog",
+                component: () => import( '@/views/blog.vue'),
+                children : [
+                    {
+                        path : 'post',
+                        redirect : { name : 'blog'},
+                    },
+                    {
+                        path : 'post/:post',
+                        component : () => import('@/views/post.vue'),
+                    },
+                ]
             },
         ]
     },
