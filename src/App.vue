@@ -16,15 +16,15 @@
         font-family: Arial, Helvetica, sans-serif;
         color: white;
     }
-    @media screen and (min-width : 1280px) {
+    @media screen and (min-width : 1441px) {
         body {
-            width : 1280px;
+            width : 1440px;
         }
     }
 
-    @media screen and (min-width : 960px) and (max-width : 1279px) {
+    @media screen and (min-width : 1280px) and (max-width : 1440px) {
         body {
-            width : 960px;
+            width : 1280px;
         }
     }
 

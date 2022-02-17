@@ -30,6 +30,7 @@
     header{
       display: flex;
       padding: 15px 0px;
+      margin : 5px 0px 20px 0px;
     }
     header .logo{
         flex: 10%;
